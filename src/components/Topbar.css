@@ -1,0 +1,147 @@
+.topbar {
+    height: var(--header-height);
+    padding: 0 2rem;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    padding: 0.5rem;
+    color: var(--text-primary);
+}
+
+.topbar-title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--background-color);
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    width: 300px;
+}
+
+.search-icon {
+    color: var(--text-secondary);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.icon-btn {
+    position: relative;
+    background: transparent;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.icon-btn:hover {
+    background: var(--background-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--danger-color);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 99px;
+    border: 2px solid white;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid #e2e8f0;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f5f9;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.chevron {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        padding: 0 1rem;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .search-bar {
+        display: none;
+        /* Hide search on mobile for space */
+    }
+
+    .user-info {
+        display: none;
+        /* Hide user details on mobile */
+    }
+
+    .user-profile {
+        padding-left: 0.5rem;
+        border-left: none;
+    }
+}

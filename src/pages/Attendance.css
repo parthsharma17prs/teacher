@@ -1,0 +1,220 @@
+.attendance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.controls-card {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 200px;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    width: 100%;
+    appearance: none;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+.select-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-secondary);
+}
+
+.date-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+.date-input input {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.control-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.stats-summary {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-box {
+    flex: 1;
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    border-left: 4px solid transparent;
+}
+
+.stat-box.present {
+    border-left-color: var(--success-color);
+}
+
+.stat-box.absent {
+    border-left-color: var(--danger-color);
+}
+
+.stat-box.late {
+    border-left-color: var(--warning-color);
+}
+
+.stat-box.total {
+    border-left-color: var(--primary-color);
+}
+
+.stat-box .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-box .label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.student-list-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.list-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+}
+
+.student-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.1s;
+}
+
+.student-row:last-child {
+    border-bottom: none;
+}
+
+.student-row:hover {
+    background: #fcfcfc;
+}
+
+.student-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.student-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f5f9;
+}
+
+.student-profile span {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.attendance-toggles {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toggle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #e2e8f0;
+    transition: all 0.2s;
+}
+
+.toggle-btn.present.active {
+    background: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.toggle-btn.absent.active {
+    background: var(--danger-color);
+    border-color: var(--danger-color);
+    color: white;
+}
+
+.toggle-btn.late.active {
+    background: var(--warning-color);
+    border-color: var(--warning-color);
+    color: white;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.05);
+    border-color: #cbd5e1;
+}
